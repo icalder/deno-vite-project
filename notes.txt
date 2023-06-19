@@ -1,0 +1,9 @@
+https://deno.com/manual@v1.34.3/node/how_to_with_npm/vue
+deno run --allow-read --allow-write --allow-env npm:create-vite-extra@latest
+cd .\vite-project\
+deno task dev
+
+# Vuetify
+https://www.npmjs.com/package/vite-plugin-vuetify
+ - add vuetify import and plugin to vite.config.mts
+ - create plugins/vuetify.ts

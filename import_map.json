@@ -1,0 +1,9 @@
+{
+  "imports": {
+    "vue": "npm:vue@^3.3.4",
+    "vue-router": "npm:vue-router@4",
+    "vuetify": "npm:vuetify@^3.3.4",
+    "vuetify/components": "npm:vuetify@^3.3.4/components",
+    "vuetify/styles": "npm:vuetify@^3.3.4/styles"
+  }
+}
