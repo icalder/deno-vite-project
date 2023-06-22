@@ -7,3 +7,21 @@ deno task dev
 https://www.npmjs.com/package/vite-plugin-vuetify
  - add vuetify import and plugin to vite.config.mts
  - create plugins/vuetify.ts
+
+ Fixes for deno defining window server-side:
+  C:\Users\Iain\deno\vite-project\node_modules\.deno\vuetify@3.3.5\node_modules\vuetify\lib\util\globals.mjs
+  export const IN_BROWSER = typeof document !== 'undefined';
+
+  C:\Users\Iain\deno\vite-project\node_modules\vue-router\dist\vue-router.mjs
+  const isBrowser = typeof document !== 'undefined';
+
+Original contents of deno.json:
+ {
+  "importMap": "./import_map.json",
+  "tasks": {
+    "dev": "deno run -A --node-modules-dir npm:vite",
+    "build": "deno run -A --node-modules-dir npm:vite build",
+    "preview": "deno run -A --node-modules-dir npm:vite preview",
+    "serve": "deno run --allow-net --allow-read https://deno.land/std@0.157.0/http/file_server.ts dist/"
+  }
+}

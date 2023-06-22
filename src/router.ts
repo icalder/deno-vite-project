@@ -17,7 +17,6 @@ const routes = Object.keys(pages).map((path) => {
 })
 
 export function createRouter() {
-  console.log(import.meta.env)
   return _createRouter({
     // use appropriate history implementation for server/client
     // import.meta.env.SSR is injected by Vite.

@@ -1,6 +1,10 @@
 <template>
 <h1>TODO add Vuetify!</h1>
-<v-card text="This might be a card?"></v-card>
+<v-divider/>
+  <v-chip>
+    Free Chip!
+  </v-chip>
+  <v-divider/>
 </template>
 
 <script setup lang="ts">

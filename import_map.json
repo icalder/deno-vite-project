@@ -1,9 +1,13 @@
 {
   "imports": {
+    "vite": "npm:vite@^4.3.9",
+    "vite/types": "npm:vite@^4.3.9/types",
     "vue": "npm:vue@^3.3.4",
+    "vue/server-renderer": "npm:vue@^3.3.4/server-renderer",
     "vue-router": "npm:vue-router@4",
-    "vuetify": "npm:vuetify@^3.3.4",
-    "vuetify/components": "npm:vuetify@^3.3.4/components",
-    "vuetify/styles": "npm:vuetify@^3.3.4/styles"
+    "vuetify": "npm:vuetify@^3.3.5",
+    "express": "npm:express@^4.18.2",
+    "compression": "npm:compression@^1.7.4",
+    "serve-static": "npm:serve-static@^1.15.0"
   }
 }
