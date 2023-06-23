@@ -2,10 +2,11 @@
   "importMap": "./import_map.json",
   "tasks": {
     "dev": "rm -f ./deno.lock && deno run -A --node-modules-dir src/server.ts",
-    "build": "deno task build:client && deno task build:server",
+    "build": "deno task build:client && deno task build:server && deno task build:express",
     "build:client": "rm -f ./deno.lock && deno run -A --node-modules-dir npm:vite build --outDir dist/client --ssrManifest",
     "build:server": "rm -f ./deno.lock && deno run -A --node-modules-dir npm:vite build --outDir dist/server --ssr src/entry-server.ts",
+    "build:express": "cp ./src/server.ts ./dist",
     "preview": "deno run -A --node-modules-dir npm:vite preview",
-    "serve": "deno run --allow-net --allow-read https://deno.land/std@0.157.0/http/file_server.ts dist/"
+    "serve": "deno run --allow-net dist/server.ts"
   }
 }

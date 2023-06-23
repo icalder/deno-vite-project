@@ -22,7 +22,7 @@ async function createServer(
 
   const manifest = isProd
   ?
-    (await import(resolveUrl('../client/ssr-manifest.json'), { assert: { type: "json" } })).default
+    (await import(resolveUrl('./client/ssr-manifest.json'), { assert: { type: "json" } })).default
   : {}
 
   const app = express()
@@ -54,7 +54,7 @@ async function createServer(
     app.use((await import('compression')).default())
     app.use(
       '/',
-      (await import('serve-static')).default(resolve('../client'), {
+      (await import('serve-static')).default(resolve('./client'), {
         index: false
       })
     )
@@ -73,7 +73,7 @@ async function createServer(
         render = (await vite.ssrLoadModule('/src/entry-server.ts')).render
       } else {
         template = indexProd
-        render = (await import('../server/entry-server.js')).render
+        render = (await import('./server/entry-server.mjs')).render
       }
 
       const [appHtml, preloadLinks, initialData] = await render(url, manifest)
