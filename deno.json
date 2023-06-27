@@ -13,11 +13,12 @@
   },
   "tasks": {
     "dev": "rm -f ./deno.lock && deno run -A --node-modules-dir src/server.ts",
+    "cache": "rm -f ./deno.lock && deno cache --node-modules-dir ./src/plugins/vuetify.ts",
     "build": "deno task build:client && deno task build:server && deno task build:express",
     "build:client": "rm -f ./deno.lock && deno run -A --node-modules-dir npm:vite build --outDir dist/client --ssrManifest",
     "build:server": "rm -f ./deno.lock && deno run -A --node-modules-dir npm:vite build --outDir dist/server --ssr src/entry-server.ts",
-    "build:express": "cp ./src/server.ts ./dist",
+    "build:express": "rm -f ./deno.lock && deno cache --node-modules-dir ./src/server.ts && cp ./src/server.ts ./dist",
     "preview": "deno run -A --node-modules-dir npm:vite preview",
-    "serve": "rm -f ./deno.lock && deno run --allow-net --allow-read --allow-write --allow-env --allow-run --node-modules-dir  dist/server.ts"
+    "serve": "deno run --allow-net --allow-read --allow-write --allow-env --allow-run --node-modules-dir dist/server.ts"
   }
 }
