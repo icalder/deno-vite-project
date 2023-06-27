@@ -17,7 +17,7 @@ async function createServer(
   const resolveUrl = (p: string) => pathToFileURL(resolvePath(p)).href
 
   const indexProd = isProd
-    ? decoder.decode(Deno.readFileSync(resolve('./client/index.html')))
+    ? decoder.decode(Deno.readFileSync(resolvePath('./client/index.html')))
     : ''
 
   const manifest = isProd
@@ -54,7 +54,7 @@ async function createServer(
     app.use((await import('compression')).default())
     app.use(
       '/',
-      (await import('serve-static')).default(resolve('./client'), {
+      (await import('serve-static')).default(resolvePath('./client'), {
         index: false
       })
     )
