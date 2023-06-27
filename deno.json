@@ -1,5 +1,16 @@
 {
-  "importMap": "./import_map.json",
+  "imports": {
+    "vite": "npm:vite@^4.3.9",
+    "vite/types": "npm:vite@^4.3.9/types",
+    "vue": "npm:vue@^3.3.4",
+    "vue/server-renderer": "npm:vue@^3.3.4/server-renderer",
+    "vue-router": "npm:vue-router@4",
+    "vuetify": "npm:vuetify@^3.3.5",
+    "vuetify/styles": "npm:vuetify@^3.3.5/styles",
+    "express": "npm:express@^4.18.2",
+    "compression": "npm:compression@^1.7.4",
+    "serve-static": "npm:serve-static@^1.15.0"
+  },
   "tasks": {
     "dev": "rm -f ./deno.lock && deno run -A --node-modules-dir src/server.ts",
     "build": "deno task build:client && deno task build:server && deno task build:express",
@@ -7,6 +18,6 @@
     "build:server": "rm -f ./deno.lock && deno run -A --node-modules-dir npm:vite build --outDir dist/server --ssr src/entry-server.ts",
     "build:express": "cp ./src/server.ts ./dist",
     "preview": "deno run -A --node-modules-dir npm:vite preview",
-    "serve": "deno run --allow-net dist/server.ts"
+    "serve": "rm -f ./deno.lock && deno run --allow-net --allow-read --allow-write --allow-env --allow-run --node-modules-dir  dist/server.ts"
   }
 }

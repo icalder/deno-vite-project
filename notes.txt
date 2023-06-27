@@ -15,6 +15,9 @@ https://www.npmjs.com/package/vite-plugin-vuetify
   C:\Users\Iain\deno\vite-project\node_modules\vue-router\dist\vue-router.mjs
   const isBrowser = typeof document !== 'undefined';
 
+If vuetify is missing from node_modules, run:
+deno cache --node-modules-dir .\src\plugins\vuetify.ts
+
 Original contents of deno.json:
  {
   "importMap": "./import_map.json",
