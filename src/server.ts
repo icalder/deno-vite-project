@@ -17,7 +17,7 @@ async function createServer(
   const resolveUrl = (p: string) => pathToFileURL(resolvePath(p)).href
 
   const indexProd = isProd
-    ? decoder.decode(Deno.readFileSync(resolve('../client/index.html')))
+    ? decoder.decode(Deno.readFileSync(resolve('./client/index.html')))
     : ''
 
   const manifest = isProd
