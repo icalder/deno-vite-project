@@ -14,10 +14,11 @@ USER deno
 WORKDIR /app
 ENV NODE_ENV=production
 
+COPY --from=build-stage /deno-dir/ /deno-dir/
 COPY --from=build-stage /app/dist/ dist/
 COPY --from=build-stage /app/node_modules/ node_modules/
 COPY --from=build-stage /app/deno.json deno.json
 COPY --from=build-stage /app/deno.lock deno.lock
 
 EXPOSE 5173
-CMD ["run", "--allow-net", "--allow-read", "--allow-write", "--allow-env", "--allow-run", "--node-modules-dir", "dist/server.ts"]
+CMD ["run", "--allow-net", "--allow-read", "--allow-write", "--allow-env", "--allow-run", "dist/server.ts"]
