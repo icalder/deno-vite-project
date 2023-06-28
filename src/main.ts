@@ -1,4 +1,3 @@
-//import "./globals.ts"
 import { ImportMetaEnv } from 'vite/types'
 import { createSSRApp } from 'vue'
 import App from './App.vue'

@@ -13,7 +13,7 @@
       "compression@^1.7.4": "compression@1.7.4",
       "express@^4.18.2": "express@4.18.2",
       "serve-static@^1.15.0": "serve-static@1.15.0",
-      "vite-plugin-vuetify@^1.0.2": "vite-plugin-vuetify@1.0.2_vite@4.3.9_vuetify@3.3.5__vite-plugin-vuetify@1.0.2___vite@4.3.9___vue@3.3.4__vue@3.3.4_vue@3.3.4",
+      "vite-plugin-vuetify@^1.0.2": "vite-plugin-vuetify@1.0.2_vite@4.3.9_vuetify@3.3.6__vite-plugin-vuetify@1.0.2___vite@4.3.9___vue@3.3.4__vue@3.3.4_vue@3.3.4",
       "vite@^4.3.9": "vite@4.3.9",
       "vue-router@4": "vue-router@4.2.2_vue@3.3.4",
       "vue@^3.3.4": "vue@3.3.4"
@@ -119,19 +119,19 @@
         "integrity": "sha512-ALYone6pm6QmwZoAgeyNksccT9Q4AWZQ6PvfwR37GT6r6FWUPguq6sUmNGSMV2Wr761oQoBxwGGa6DR5o1DC9g==",
         "dependencies": {
           "@types/connect": "@types/connect@3.4.35",
-          "@types/node": "@types/node@20.3.1"
+          "@types/node": "@types/node@20.3.2"
         }
       },
       "@types/connect@3.4.35": {
         "integrity": "sha512-cdeYyv4KWoEgpBISTxWvqYsVy444DOqehiF3fM3ne10AmJ62RSyNkUnxMJXHQWRQQX2eR94m5y1IZyDwBjV9FQ==",
         "dependencies": {
-          "@types/node": "@types/node@20.3.1"
+          "@types/node": "@types/node@20.3.2"
         }
       },
       "@types/express-serve-static-core@4.17.35": {
         "integrity": "sha512-wALWQwrgiB2AWTT91CB62b6Yt0sNHpznUXeZEcnPU3DRdlDIz74x8Qg1UUYKSVFi+va5vKOLYRBI1bRKiLLKIg==",
         "dependencies": {
-          "@types/node": "@types/node@20.3.1",
+          "@types/node": "@types/node@20.3.2",
           "@types/qs": "@types/qs@6.9.7",
           "@types/range-parser": "@types/range-parser@1.2.4",
           "@types/send": "@types/send@0.17.1"
@@ -154,8 +154,8 @@
         "integrity": "sha512-Y4XFY5VJAuw0FgAqPNd6NNoV44jbq9Bz2L7Rh/J6jLTiHBSBJa9fxqQIvkIld4GsoDOcCbvzOUAbLPsSKKg+uA==",
         "dependencies": {}
       },
-      "@types/node@20.3.1": {
-        "integrity": "sha512-EhcH/wvidPy1WeML3TtYFGR83UzjxeWRen9V402T8aUGYsCHOmfoisV3ZSg03gAFIbLq8TnWOJ0f4cALtnSEUg==",
+      "@types/node@20.3.2": {
+        "integrity": "sha512-vOBLVQeCQfIcF/2Y7eKFTqrMnizK5lRNQ7ykML/5RuwVXVWxYkgwS7xbt4B6fKCUPgbSL5FSsjHQpaGQP/dQmw==",
         "dependencies": {}
       },
       "@types/qs@6.9.7": {
@@ -170,14 +170,14 @@
         "integrity": "sha512-Cwo8LE/0rnvX7kIIa3QHCkcuF21c05Ayb0ZfxPiv0W8VRiZiNW/WuRupHKpqqGVGf7SUA44QSOUKaEd9lIrd/Q==",
         "dependencies": {
           "@types/mime": "@types/mime@1.3.2",
-          "@types/node": "@types/node@20.3.1"
+          "@types/node": "@types/node@20.3.2"
         }
       },
       "@types/serve-static@1.15.1": {
         "integrity": "sha512-NUo5XNiAdULrJENtJXZZ3fHtfMolzZwczzBbnAeBbqBwG+LaG6YaJtuwzwGSQZ2wsCrxjEhNNjAkKigy3n8teQ==",
         "dependencies": {
           "@types/mime": "@types/mime@3.0.1",
-          "@types/node": "@types/node@20.3.1"
+          "@types/node": "@types/node@20.3.2"
         }
       },
       "@vitejs/plugin-vue@4.2.3_vite@4.3.9_vue@3.3.4": {
@@ -272,13 +272,13 @@
         "integrity": "sha512-7OjdcV8vQ74eiz1TZLzZP4JwqM5fA94K6yntPS5Z25r9HDuGNzaGdgvwKYq6S+MxwF0TFRwe50fIR/MYnakdkQ==",
         "dependencies": {}
       },
-      "@vuetify/loader-shared@1.7.1_vue@3.3.4_vuetify@3.3.5__vite-plugin-vuetify@1.0.2___vite@4.3.9___vue@3.3.4__vue@3.3.4_vite-plugin-vuetify@1.0.2__vite@4.3.9__vuetify@3.3.5___vue@3.3.4__vue@3.3.4": {
+      "@vuetify/loader-shared@1.7.1_vue@3.3.4_vuetify@3.3.6__vite-plugin-vuetify@1.0.2___vite@4.3.9___vue@3.3.4__vue@3.3.4_vite-plugin-vuetify@1.0.2__vite@4.3.9__vuetify@3.3.6___vue@3.3.4__vue@3.3.4": {
         "integrity": "sha512-kLUvuAed6RCvkeeTNJzuy14pqnkur8lTuner7v7pNE/kVhPR97TuyXwBSBMR1cJeiLiOfu6SF5XlCYbXByEx1g==",
         "dependencies": {
           "find-cache-dir": "find-cache-dir@3.3.2",
           "upath": "upath@2.0.1",
           "vue": "vue@3.3.4",
-          "vuetify": "vuetify@3.3.5_vite-plugin-vuetify@1.0.2__vite@4.3.9__vuetify@3.3.5___vue@3.3.4__vue@3.3.4_vue@3.3.4"
+          "vuetify": "vuetify@3.3.6_vite-plugin-vuetify@1.0.2__vite@4.3.9__vuetify@3.3.6___vue@3.3.4__vue@3.3.4_vue@3.3.4"
         }
       },
       "accepts@1.3.8": {
@@ -711,8 +711,8 @@
           "unpipe": "unpipe@1.0.0"
         }
       },
-      "rollup@3.25.1": {
-        "integrity": "sha512-tywOR+rwIt5m2ZAWSe5AIJcTat8vGlnPFAv15ycCrw33t6iFsXZ6mzHVFh2psSjxQPmI+xgzMZZizUAukBI4aQ==",
+      "rollup@3.25.3": {
+        "integrity": "sha512-ZT279hx8gszBj9uy5FfhoG4bZx8c+0A1sbqtr7Q3KNWIizpTdDEPZbV2xcbvHsnFp4MavCQYZyzApJ+virB8Yw==",
         "dependencies": {
           "fsevents": "fsevents@2.3.2"
         }
@@ -807,14 +807,14 @@
         "integrity": "sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==",
         "dependencies": {}
       },
-      "vite-plugin-vuetify@1.0.2_vite@4.3.9_vuetify@3.3.5__vite-plugin-vuetify@1.0.2___vite@4.3.9___vue@3.3.4__vue@3.3.4_vue@3.3.4": {
+      "vite-plugin-vuetify@1.0.2_vite@4.3.9_vuetify@3.3.6__vite-plugin-vuetify@1.0.2___vite@4.3.9___vue@3.3.4__vue@3.3.4_vue@3.3.4": {
         "integrity": "sha512-MubIcKD33O8wtgQXlbEXE7ccTEpHZ8nPpe77y9Wy3my2MWw/PgehP9VqTp92BLqr0R1dSL970Lynvisx3UxBFw==",
         "dependencies": {
-          "@vuetify/loader-shared": "@vuetify/loader-shared@1.7.1_vue@3.3.4_vuetify@3.3.5__vite-plugin-vuetify@1.0.2___vite@4.3.9___vue@3.3.4__vue@3.3.4_vite-plugin-vuetify@1.0.2__vite@4.3.9__vuetify@3.3.5___vue@3.3.4__vue@3.3.4",
+          "@vuetify/loader-shared": "@vuetify/loader-shared@1.7.1_vue@3.3.4_vuetify@3.3.6__vite-plugin-vuetify@1.0.2___vite@4.3.9___vue@3.3.4__vue@3.3.4_vite-plugin-vuetify@1.0.2__vite@4.3.9__vuetify@3.3.6___vue@3.3.4__vue@3.3.4",
           "debug": "debug@4.3.4",
           "upath": "upath@2.0.1",
           "vite": "vite@4.3.9",
-          "vuetify": "vuetify@3.3.5_vite-plugin-vuetify@1.0.2__vite@4.3.9__vuetify@3.3.5___vue@3.3.4__vue@3.3.4_vue@3.3.4"
+          "vuetify": "vuetify@3.3.6_vite-plugin-vuetify@1.0.2__vite@4.3.9__vuetify@3.3.6___vue@3.3.4__vue@3.3.4_vue@3.3.4"
         }
       },
       "vite@4.3.9": {
@@ -823,7 +823,7 @@
           "esbuild": "esbuild@0.17.19",
           "fsevents": "fsevents@2.3.2",
           "postcss": "postcss@8.4.24",
-          "rollup": "rollup@3.25.1"
+          "rollup": "rollup@3.25.3"
         }
       },
       "vue-router@4.2.2_vue@3.3.4": {
@@ -843,10 +843,10 @@
           "@vue/shared": "@vue/shared@3.3.4"
         }
       },
-      "vuetify@3.3.5_vite-plugin-vuetify@1.0.2__vite@4.3.9__vuetify@3.3.5___vue@3.3.4__vue@3.3.4_vue@3.3.4": {
-        "integrity": "sha512-vkfPgPmKfSJa+jq6Ov+CTg7L1t2jLPKa7Slef9OrVHcLqg+gLuIj0z4PJE6E9HjFTUbgZShShOGxps52REJRIA==",
+      "vuetify@3.3.6_vite-plugin-vuetify@1.0.2__vite@4.3.9__vuetify@3.3.6___vue@3.3.4__vue@3.3.4_vue@3.3.4": {
+        "integrity": "sha512-9QHh3mY5dK2Y4FGGBHFaIl/RVoP3Wg+XzP/pvruAoglIsUqzMlHrUOYAjO6/SWTxmhsiPI1jl4TyEBlppMXtNQ==",
         "dependencies": {
-          "vite-plugin-vuetify": "vite-plugin-vuetify@1.0.2_vite@4.3.9_vuetify@3.3.5__vite-plugin-vuetify@1.0.2___vite@4.3.9___vue@3.3.4__vue@3.3.4_vue@3.3.4",
+          "vite-plugin-vuetify": "vite-plugin-vuetify@1.0.2_vite@4.3.9_vuetify@3.3.6__vite-plugin-vuetify@1.0.2___vite@4.3.9___vue@3.3.4__vue@3.3.4_vue@3.3.4",
           "vue": "vue@3.3.4"
         }
       }

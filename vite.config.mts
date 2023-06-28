@@ -4,6 +4,8 @@ import vuetify from 'npm:vite-plugin-vuetify@^1.0.2'
 
 import 'vue'
 import 'vue-router'
+import 'vuetify'
+import 'sass'
 
 // https://vitejs.dev/config/
 export default defineConfig({

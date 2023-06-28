@@ -9,7 +9,7 @@ https://www.npmjs.com/package/vite-plugin-vuetify
  - create plugins/vuetify.ts
 
  Fixes for deno defining window server-side:
-  C:\Users\Iain\deno\vite-project\node_modules\.deno\vuetify@3.3.5\node_modules\vuetify\lib\util\globals.mjs
+  C:\Users\Iain\deno\vite-project\node_modules\vuetify\lib\util\globals.mjs
   export const IN_BROWSER = typeof document !== 'undefined';
 
   C:\Users\Iain\deno\vite-project\node_modules\vue-router\dist\vue-router.mjs

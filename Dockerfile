@@ -2,8 +2,7 @@ FROM denoland/deno:alpine-1.34.3 as build-stage
 USER deno
 WORKDIR /app
 COPY . .
-RUN deno task cache && \
-  deno task build && \
+RUN deno task build && \
   sed -i "s/IN_BROWSER = typeof window !== 'undefined'/IN_BROWSER = typeof document !== 'undefined'/" node_modules/vuetify/lib/util/globals.mjs && \
   sed -i "s/isBrowser = typeof window !== 'undefined'/isBrowser = typeof document !== 'undefined'/" node_modules/vue-router/dist/vue-router.mjs && \
   deno task build

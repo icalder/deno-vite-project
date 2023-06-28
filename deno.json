@@ -1,5 +1,6 @@
 {
   "imports": {
+    "sass": "npm:sass@^1.63.6", 
     "vite": "npm:vite@^4.3.9",
     "vite/types": "npm:vite@^4.3.9/types",
     "vue": "npm:vue@^3.3.4",
@@ -12,8 +13,7 @@
     "serve-static": "npm:serve-static@^1.15.0"
   },
   "tasks": {
-    "dev": "rm -f ./deno.lock && deno run -A --node-modules-dir src/server.ts",
-    "cache": "rm -f ./deno.lock && deno cache --node-modules-dir ./src/plugins/vuetify.ts",
+    "dev": "rm -f ./deno.lock && deno run -A --node-modules-dir src/server.ts",    
     "build": "deno task build:client && deno task build:server && deno task build:express",
     "build:client": "rm -f ./deno.lock && deno run -A --node-modules-dir npm:vite build --outDir dist/client --ssrManifest",
     "build:server": "rm -f ./deno.lock && deno run -A --node-modules-dir npm:vite build --outDir dist/server --ssr src/entry-server.ts",
