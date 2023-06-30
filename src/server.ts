@@ -3,6 +3,8 @@ import express from "express"
 import { fileURLToPath, pathToFileURL } from 'node:url'
 import { dirname, resolve } from "https://deno.land/std@0.192.0/path/posix.ts"
 import { ViteDevServer } from 'vite'
+import { apiRouter } from './api/router.ts'
+import { useNatsClient } from './services/natsclient.ts'
 
 const isTest = Deno.env.get('NODE_ENV') === 'test' || !!Deno.env.get('VITE_TEST_BUILD')
 
@@ -17,12 +19,12 @@ async function createServer(
   const resolveUrl = (p: string) => pathToFileURL(resolvePath(p)).href
 
   const indexProd = isProd
-    ? decoder.decode(Deno.readFileSync(resolvePath('./client/index.html')))
+    ? decoder.decode(Deno.readFileSync(resolvePath('../dist/client/index.html')))
     : ''
 
   const manifest = isProd
   ?
-    (await import(resolveUrl('./client/ssr-manifest.json'), { assert: { type: "json" } })).default
+    (await import(resolveUrl('../dist/client/ssr-manifest.json'), { assert: { type: "json" } })).default
   : {}
 
   const app = express()
@@ -54,26 +56,28 @@ async function createServer(
     app.use((await import('compression')).default())
     app.use(
       '/',
-      (await import('serve-static')).default(resolvePath('./client'), {
+      (await import('serve-static')).default(resolvePath('../dist/client'), {
         index: false
       })
     )
   }
-  
+
+  app.use('/api', apiRouter)
+
   app.use('*', async (req, res) => {
     try {
       const url = req.originalUrl.replace('/test/', '/')
-      
+
       let template: string, render: (url: string, manifest: any) => Promise<[string, string, Record<string, any>]>
       if (!isProd && vite) {
         // always read fresh template in dev
-        
+
         template = decoder.decode(Deno.readFileSync(resolve('index.html')))
         template = await vite.transformIndexHtml(url, template)
         render = (await vite.ssrLoadModule('/src/entry-server.ts')).render
       } else {
         template = indexProd
-        render = (await import('./server/entry-server.mjs')).render
+        render = (await import('../dist/server/entry-server.mjs')).render
       }
 
       const [appHtml, preloadLinks, initialData] = await render(url, manifest)
@@ -94,12 +98,14 @@ async function createServer(
       }
     }
   })
-  
-  
+
+
   return {app}
 }
 
 if (!isTest) {
+  const natsUrl = Deno.env.get("NATS_URL")
+  await useNatsClient().connect(natsUrl)
   createServer().then(({ app }) =>
     app.listen(5173, () => {
       console.log('http://localhost:5173')

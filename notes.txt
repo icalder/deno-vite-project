@@ -28,3 +28,13 @@ Original contents of deno.json:
     "serve": "deno run --allow-net --allow-read https://deno.land/std@0.157.0/http/file_server.ts dist/"
   }
 }
+
+TODO!!!
+ modified:   Dockerfile
+        modified:   README.md
+        modified:   deno.lock
+        new file:   src/api/client.ts
+        new file:   src/api/router.ts
+        modified:   src/pages/About.vue
+        modified:   src/server.ts
+        new file:   src/services/natsclient.ts

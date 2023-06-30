@@ -17,8 +17,9 @@ USER deno
 
 COPY --from=build-stage /deno-dir/ /deno-dir/
 COPY --from=build-stage /app/dist/ dist/
+COPY --from=build-stage /app/src/ src/
 COPY --from=build-stage /app/deno.json deno.json
 COPY --from=build-stage /app/deno.lock deno.lock
 
 EXPOSE 5173
-CMD ["run", "--allow-net", "--allow-read", "--allow-write", "--allow-env", "--allow-run", "dist/server.ts"]
+CMD ["run", "--allow-net", "--allow-read", "--allow-write", "--allow-env", "--allow-run", "src/server.ts"]

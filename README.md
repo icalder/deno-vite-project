@@ -28,7 +28,7 @@ $ deno task dev
 ## Running in a container
 ```
 docker build -t icalder/deno-vite-project .
-docker run --rm -it -p 5173:5173 icalder/deno-vite-project
+docker run --rm -it -e NATS_URL=nats://host.docker.internal:4222 -p 5173:5173 icalder/deno-vite-project
 ```
 
 ## Deploy

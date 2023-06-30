@@ -10,6 +10,7 @@
       "@vitejs/plugin-vue@^4.2.3": "@vitejs/plugin-vue@4.2.3_vite@4.3.9_vue@3.3.4",
       "compression@^1.7.4": "compression@1.7.4",
       "express@^4.18.2": "express@4.18.2",
+      "nats@^2.15.1": "nats@2.15.1",
       "serve-static@^1.15.0": "serve-static@1.15.0",
       "vite-plugin-vuetify@^1.0.2": "vite-plugin-vuetify@1.0.2_vite@4.3.9_vuetify@3.3.6__vite-plugin-vuetify@1.0.2___vite@4.3.9___vue@3.3.4__vue@3.3.4_vue@3.3.4",
       "vite@^4.3.9": "vite@4.3.9",
@@ -554,9 +555,21 @@
         "integrity": "sha512-BGcqMMJuToF7i1rt+2PWSNVnWIkGCU78jBG3RxO/bZlnZPK2Cmi2QaffxGO/2RvWi9sL+FAiRiXMgsyxQ1DIDA==",
         "dependencies": {}
       },
+      "nats@2.15.1": {
+        "integrity": "sha512-MMCQXxOLv3dUwh0CRai0RGdMdAHjA3LNOYEAdNkLT8GX4CJFVKlYqkM3K9qVkYhvWwiCUVPHWFSktcrhexSzSw==",
+        "dependencies": {
+          "nkeys.js": "nkeys.js@1.0.5"
+        }
+      },
       "negotiator@0.6.3": {
         "integrity": "sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==",
         "dependencies": {}
+      },
+      "nkeys.js@1.0.5": {
+        "integrity": "sha512-u25YnRPHiGVsNzwyHnn+PT90sgAhnS8jUJ1nxmkHMFYCJ6+Ic0lv291w7uhRBpJVJ3PH2GWbYqA151lGCRrB5g==",
+        "dependencies": {
+          "tweetnacl": "tweetnacl@1.0.3"
+        }
       },
       "object-inspect@1.12.3": {
         "integrity": "sha512-geUvdk7c+eizMNUDkRpW1wJwgfOiOeHbxBR/hLXK1aT6zmVSO0jsQcs7fj6MGw89jC/cjGfLcNOrtMYtGqm81g==",
@@ -715,6 +728,10 @@
       },
       "toidentifier@1.0.1": {
         "integrity": "sha512-o5sSPKEkg/DIQNmH43V0/uerLrpzVedkUh8tGNvaeXpfpuwjKenlSox/2O/BTlZUtEe+JG7s5YhEz608PlAHRA==",
+        "dependencies": {}
+      },
+      "tweetnacl@1.0.3": {
+        "integrity": "sha512-6rt+RN7aOi1nGMyC4Xa5DdYiukl2UWCbcJft7YhxReBGQD7OAM8Pbxw6YMo4r2diNEA8FEmu32YOn9rhaiE5yw==",
         "dependencies": {}
       },
       "type-is@1.6.18": {
