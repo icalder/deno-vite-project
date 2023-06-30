@@ -9,8 +9,6 @@
     "vuetify": "npm:vuetify@^3.3.6",
     "vuetify/styles": "npm:vuetify@^3.3.6/styles",
     "vuetify/iconsets/mdi": "npm:vuetify@^3.3.6/iconsets/mdi",
-    "@mdi/font": "npm:@mdi/font@^7.2.96",
-    "@mdi/font/css/materialdesignicons.css": "npm:@mdi/font@^7.2.96/css/materialdesignicons.css",
     "express": "npm:express@^4.18.2",
     "compression": "npm:compression@^1.7.4",
     "serve-static": "npm:serve-static@^1.15.0"
